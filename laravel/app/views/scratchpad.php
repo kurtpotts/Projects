@@ -1,72 +1,108 @@
 <html>
-  <head></head>
-  <body>
-    <?php
-      echo "hello"." "."world";
-      
-      echo "<br />";
-      echo "<br />";
+  <head>
+    
+  </head>
+   <body>
 
-      function count_to_ten(){
-        $i = 0;
-        do {
-        	++$i;
-        	echo "$i mississippi<br />";
+      <div id="container">  
+        <div id="day5" class="day">
+          <h1>Week 3, Day 5</h1>
+          <?php
 
-	    } while ($i < 10);
-	  }
+            Class Game {
+              public $game_system = '';
+              public $game_players = '';
+              public $game_master = '';
+              public function __construct($system, $players) {
+                echo "Players are ready\n";
+                $this->game_system = $system;
+                $this->game_players = $players;
+              }
 
-	  count_to_ten();
+              public function get_gm($GM) {
+                $this->game_master = $GM;
+              }
+            }
 
-      echo "<br />";
-      echo "<br />";
-      
-      function for_ten(){
-      	for ($i=1; $i<=10; $i++){
-      		if ($i < 4) {
-      		echo "$i potato<br />";
-      		}
-      		elseif ($i == 4) {
-      			echo "$i<br />";
-      		}
-      		elseif (($i > 4) && ($i < 8)) {
-      			echo "$i potato<br />";
-      		}
-      		elseif ($i == 8) {
-      			echo "More!<br />";
-      		}
-      		elseif ($i > 8) {
-      		 	echo "No More Potatoes!<br />";
-      		 } 
-      	}
-      }
+            $SW = new Game('Savage Worlds', '6');
+            $SW->get_gm('Shane');
+            var_dump($SW);
 
-      for_ten();
 
-      echo "<br />";
-      echo "<br />";
-      
-      function rpggames(){
-      	$rpg = array("DnD", "Savage Worlds", "GURPS", "Fate", "Shadowrun");
 
-      	foreach ($rpg as $value) {
-      		echo "$value<br />";
-      	}
-      }
+          ?>
+        </div>
 
-      rpggames();
 
-      echo "<br />";
-      echo "<br />";
+        <div id="day4" class="day">
+          <h1>Week 2, Day 4</h1>
+          <?php
+            echo "hello"." "."world";
+            
+            echo "<br />";
+            echo "<br />";
 
-      function info($firstname, $lastname, $phonenumbers){
-      	$yourinfo = array('firstname' => "$firstname", 'lastname' => "$lastname", 'phonenumbers' => $phonenumbers);
-      		return $yourinfo;
-      }
+            function count_to_ten(){
+              $i = 0;
+              do {
+              	++$i;
+              	echo "$i mississippi<br />";
 
-      var_dump(info("Jenny", "Smith", array("867-5309", "555-1234")));
+      	    } while ($i < 10);
+      	  }
 
-    ?>
+      	  count_to_ten();
 
+            echo "<br />";
+            echo "<br />";
+            
+            function for_ten(){
+            	for ($i=1; $i<=10; $i++){
+            		if ($i < 4) {
+            		echo "$i potato<br />";
+            		}
+            		elseif ($i == 4) {
+            			echo "$i<br />";
+            		}
+            		elseif (($i > 4) && ($i < 8)) {
+            			echo "$i potato<br />";
+            		}
+            		elseif ($i == 8) {
+            			echo "More!<br />";
+            		}
+            		elseif ($i > 8) {
+            		 	echo "No More Potatoes!<br />";
+            		 } 
+            	}
+            }
+
+            for_ten();
+
+            echo "<br />";
+            echo "<br />";
+            
+            function rpggames(){
+            	$rpg = array("DnD", "Savage Worlds", "GURPS", "Fate", "Shadowrun");
+
+            	foreach ($rpg as $value) {
+            		echo "$value<br />";
+            	}
+            }
+
+            rpggames();
+
+            echo "<br />";
+            echo "<br />";
+
+            function info($firstname, $lastname, $phonenumbers){
+            	$yourinfo = array('firstname' => "$firstname", 'lastname' => "$lastname", 'phonenumbers' => $phonenumbers);
+            		return $yourinfo;
+            }
+
+            var_dump(info("Jenny", "Smith", array("867-5309", "555-1234")));
+
+          ?>
+      </div>
+     </div> 
   </body>
 </html>
