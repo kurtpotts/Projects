@@ -1,6 +1,7 @@
 <html>
   <head>
     
+    <link rel="stylesheet" type="text/css" href="{{ HTML::style('css/style.css') }}">
   </head>
    <body>
 
